@@ -57,7 +57,7 @@ void pr_obh(Branch*& aBranch) // pryamyy obkhid
 	pr_obh(aBranch->RightBranch); //obkhid pravoho piddereva 
 }
 
-void gor_obh(Branch*& aBranch) horyzontalnyy(symetrychnyy) obkhid
+void gor_obh(Branch*& aBranch) //horyzontalnyy(symetrychnyy) obkhid
 {
 	if (NULL == aBranch)    return;    //Yakshcho dereva nemaye, vykhodymo
 
@@ -181,7 +181,7 @@ int main()
 	int num;
 	int element;
 
-	cout << "Введiть кiлькiсть елементiв бiнарного дерева: ";
+	cout << "Vvedit kilkist elementiv binarnoho dereva: ";
 	cin >> num;
 	cout << endl;
 
@@ -191,51 +191,51 @@ int main()
 		//Add(1, Root);
 		
 	}
-	cout << "Вивiд бiнарного дерева: " << endl;
+	cout << "Vyvid binarnoho dereva: " << endl;
 	print(Root);
 	cout << endl;
 
-	cout << "Прямий обхiд бiнарного дерева: " << endl;
+	cout << "Pryamyy obkhid binarnoho dereva: " << endl;
 	pr_obh(Root);
 	cout << endl;
 	
-	cout << "Горизонтальний(симетричний) обхiд бiнарного дерева: " << endl;
+	cout << "Horyzontalnyy(symetrychnyy) obkhid binarnoho dereva: " << endl;
 	gor_obh(Root);
 	cout << endl;
 
-	cout << "Додавання нового елементу в бiнарне дерево:" << endl;
-	cout << "Введiть елемет: ";
+	cout << "Dodavannya novoho elementu v binarne derevo:" << endl;
+	cout << "Vvedit elemet: ";
 	cin >> element;
 	add_elem(element, Root);
 	//Add(element, Root);
 
-	cout << "Вивiд бiнарного дерева: " << endl;
+	cout << "Vyvid binarnoho dereva: " << endl;
 	print(Root);
 	cout << endl;
 
-	cout << "Видалення нвого елементу з бiнарного дерева:" << endl;
-	cout << "Введiть елемет: ";
+	cout << "Vydalennya novoho elementu z binarnoho dereva:" << endl;
+	cout << "Vvedit elemet: ";
 	cin >> element;
 	del_elem(Root, element);
 
-	cout << "Вивiд бiнарного дерева: " << endl;
+	cout << "Vyvid binarnoho dereva:" << endl;
 	print(Root);
 	cout << endl;
 
-	cout << "Кiлькiсть парних елементiв: ";
+	cout << "Kilkist parnykh elementiv: ";
 	cout << par(Root) << endl;
     cout << endl;
     
-    cout << "Кiлькiсть непарних елементiв: ";
+    cout << "Kilkist neparnykh elementiv: ";
 	cout << ne_par(Root) << endl;
     cout << endl;
     
-	cout << "Сума всiх елементiв бiнарного дерева: ";
+	cout << "Suma vsikh elementiv binarnoho dereva: ";
 	cout << summa(Root) << endl;
     cout << endl;
     
 	FreeTree(Root);
-	cout << "Звiльнення динамiчної пам'ятi..." << endl;
+	cout << "Zvilnennya dynamichnoyi pamyati..." << endl;
 
 	return 0;
 }
