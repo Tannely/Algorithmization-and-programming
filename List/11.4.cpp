@@ -31,21 +31,19 @@ main ()
   insert ("Korchaha", 5, studenty);
   insert ("Honcharenko", 4, studenty);
   insert ("Maziy", 3, studenty);
-  insert ("Lazarenko", 5, studenty);
-  insert ("Budonnyy", 5, studenty);
   studenty = head;
   int four_mark = 0;
   
   while (studenty != NULL)
     {
        
-        if(studenty->mark == 4) {
+        if(studenty->mark == 5) {
             four_mark++;
-            cout <<endl << "Mark is 4: " << studenty->Name << endl;
+            cout <<endl << "Mark is 5: " << studenty->Name << endl;
         }
         studenty = studenty->next;
     }
-    cout <<endl <<"Students with 4 (count): " << four_mark << endl;
+    cout <<endl <<"Students with 5 (count): " << four_mark << endl;
     delete studenty;
   return 0;
 }
